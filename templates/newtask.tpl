@@ -79,7 +79,7 @@
           <td><label for="reportedver">{L('reportedversion')}</label></td>
           <td>
             <select class="adminlist" name="product_version" id="reportedver">
-              {!tpl_options($proj->listVersions(false, 2), Req::val('product_version'))}
+              {!tpl_options($proj->listVersions(false), Req::val('product_version'))}
             </select>
           </td>
         </tr>
@@ -88,7 +88,7 @@
           <td>
             <select id="dueversion" name="closedby_version" {!tpl_disableif(!$user->perms('modify_all_tasks'))}>
               <option value="0">{L('undecided')}</option>
-              {!tpl_options($proj->listVersions(false, 3), Req::val('closedby_version'))}
+              {!tpl_options($proj->listVersions(false), Req::val('closedby_version'))}
             </select>
           </td>
         </tr>
