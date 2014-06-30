@@ -84,7 +84,7 @@
 				<li>
 					<label for="reportedver">{L('reportedversion')}</label>
 					<select id="reportedver" name="reportedver">
-					{!tpl_options($proj->listVersions(false, 2, $task_details['product_version']), Req::val('reportedver', $task_details['product_version']))}
+					{!tpl_options($proj->listVersions(false, 0, $task_details['product_version']), Req::val('reportedver', $task_details['product_version']))}
 					</select>
 				</li>
 	
@@ -92,7 +92,7 @@
 					<label for="dueversion">{L('dueinversion')}</label>
 					<select id="dueversion" name="closedby_version">
 					 <option value="0">{L('undecided')}</option>
-					 {!tpl_options($proj->listVersions(false, 3), Req::val('closedby_version', $task_details['closedby_version']))}
+					 {!tpl_options($proj->listVersions(false, 0), Req::val('closedby_version', $task_details['closedby_version']))}
 					</select>
 				</li>
 	
