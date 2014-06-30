@@ -119,8 +119,8 @@ function tpl_draw_cell($task, $colname, $format = "<td class='%s'>%s</td>") {
             $value = tpl_tasklink($task, $task['task_id']);
             break;
         case 'summary':
-            $value = tpl_tasklink($task, utf8_substr($task['item_summary'], 0, 55));
-            if (utf8_strlen($task['item_summary']) > 55) {
+            $value = tpl_tasklink($task, utf8_substr($task['item_summary'], 0, 100));
+            if (utf8_strlen($task['item_summary']) > 100) {
                 $value .= '...';
             }
             break;

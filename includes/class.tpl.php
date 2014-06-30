@@ -188,7 +188,7 @@ function tpl_tasklink($task, $text = null, $strict = false, $attrs = array(), $t
     }
 
     if (is_object($user) && $user->can_view_task($task)) {
-        $summary = utf8_substr($task['item_summary'], 0, 64);
+        $summary = utf8_substr($task['item_summary'], 0, 100);
     } else {
         $summary = L('taskmadeprivate');
     }
@@ -196,7 +196,7 @@ function tpl_tasklink($task, $text = null, $strict = false, $attrs = array(), $t
     if (is_null($text)) {
         $text = sprintf('FS#%d - %s', $task['task_id'], Filters::noXSS($summary));
     } elseif(is_string($text)) {
-        $text = htmlspecialchars(utf8_substr($text, 0, 64), ENT_QUOTES, 'utf-8');
+        $text = htmlspecialchars(utf8_substr($text, 0, 100), ENT_QUOTES, 'utf-8');
     } else {
         //we can't handle non-string stuff here.
         return '';
