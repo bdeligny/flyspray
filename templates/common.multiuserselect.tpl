@@ -4,7 +4,7 @@
                    <a href="javascript:unselectAll()">{L('noone')}</a>
                    <br />
 
-                   <select size="8" style="width:200px;" name="rassigned_to[]" id="rassigned_to" multiple="multiple">
+                   <select size="20" style="width:200px;" name="rassigned_to[]" id="rassigned_to" multiple="multiple">
                      <?php foreach ($userlist as $group => $users): ?>
                         <optgroup label="{$group}">
                         <?php foreach ($users as $info): ?>
