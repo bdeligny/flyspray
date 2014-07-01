@@ -115,11 +115,19 @@
 
         <div class="search_select">
         <label class="default multisel" for="percent">{L('percentcomplete')}</label>
-        <select name="percent[]" id="percent" multiple="multiple" size="10">
+        <select name="percent[]" id="percent" multiple="multiple" size="10" style="width:110px">
           <?php $percentages = array(); for ($i = 0; $i <= 100; $i += 10) $percentages[$i] = $i; ?>
           {!tpl_options(array('' => L('anyprogress')) + $percentages, Get::val('percent', ''))}
         </select>
         </div>
+		
+		<div class="search_select">
+        <label class="default multisel" for="os">{L('operatingsystem')}</label>
+        <select name="os[]" id="os" multiple="multiple" size="10">
+		  {!tpl_options($proj->listOs(), Get::val('os'))}
+        </select>
+        </div>
+		
         <div class="clear"></div>
         </fieldset>
 
