@@ -124,7 +124,7 @@
 		<div class="search_select">
         <label class="default multisel" for="os">{L('operatingsystem')}</label>
         <select name="os[]" id="os" multiple="multiple" size="10">
-		  {!tpl_options($proj->listOs(), Get::val('os'))}
+		  {!tpl_options(array('' => 'Any OS') + $proj->listOs(), Get::val('os'))}
         </select>
         </div>
 		
