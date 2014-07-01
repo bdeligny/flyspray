@@ -8,8 +8,8 @@ function Disable(formid)
 
 function showstuff(boxid, type){
    if (!type) type = 'block';
-   //$(boxid).style.display= type; Not compatible with lightbox 2.7.1
-   //$(boxid).style.visibility='visible'; Not compatible with lightbox 2.7.1
+   $(boxid).style.display= type;
+   $(boxid).style.visibility='visible';
 }
 
 function hidestuff(boxid){
